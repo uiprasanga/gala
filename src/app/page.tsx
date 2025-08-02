@@ -9,32 +9,29 @@ export default function Home() {
     {
       image: "/1.jpg",
       title: "GALATASARAY",
-      subtitle: "USA CHAMPIONSHIP GALA",
-      description: "Join us for an unforgettable evening celebrating a legendary victory and the spirit of Galatasaray."
+      subtitle: "USA CHAMPIONSHIP GALA", 
     },
     {
       image: "/2.jpg", 
       title: "CHAMPIONSHIP",
       subtitle: "GALA DINNER",
-      description: "Experience the pinnacle of Galatasaray excellence in the heart of New York City."
+       
     },
     {
       image: "/3.jpg",
       title: "LEGENDARY",
       subtitle: "CELEBRATION",
-      description: "Where passion meets prestige in the most exclusive Galatasaray event of the year."
+      
     },
     {
       image: "/4.jpg",
       title: "UNITED",
-      subtitle: "IN VICTORY",
-      description: "Celebrating our championship legacy with the global Galatasaray community."
+      subtitle: "IN VICTORY",   
     },
     {
       image: "/5.jpg",
       title: "EXCELLENCE",
-      subtitle: "REDEFINED",
-      description: "The ultimate Galatasaray experience awaits you at our championship gala."
+      subtitle: "REDEFINED", 
     }
   ];
 
@@ -51,21 +48,29 @@ export default function Home() {
       <header className="bg-black/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">GS</span>
-              </div>
-              <div>
-                <span className="text-white font-bold text-xl tracking-wide">GALATASARAY</span>
-                <div className="text-red-400 text-sm font-medium">USA</div>
-              </div>
-            </div>
+                                <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 rounded-full overflow-hidden">
+                        <Image
+                          src="/logo.jpg"
+                          alt="Galatasaray Logo"
+                          width={48}
+                          height={48}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <span className="text-white font-bold text-xl tracking-wide">GALATASARAY</span>
+                        <div className="text-red-400 text-sm font-medium">USA</div>
+                      </div>
+                    </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#" className="text-gray-300 hover:text-white transition-colors font-medium">Home</a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors font-medium">About</a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors font-medium">Events</a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors font-medium">Shop</a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
+              <a href="/about" className="text-gray-300 hover:text-white transition-colors font-medium">About</a>
+              <a href="/packages" className="text-gray-300 hover:text-white transition-colors font-medium">Events</a>
+              <a href="/membership" className="text-gray-300 hover:text-white transition-colors font-medium">Membership</a>
+              <a href="/sponsorship" className="text-gray-300 hover:text-white transition-colors font-medium">Sponsorship</a>
+              <a href="/shop" className="text-gray-300 hover:text-white transition-colors font-medium">Shop</a>
+              <a href="/contact" className="text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
               <button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-lg transition-all duration-300 font-semibold">
                 Sign Up
               </button>
@@ -131,7 +136,7 @@ export default function Home() {
               </div>
               
               {/* Hexagonal Pattern */}
-              <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0   opacity-10">
                 <div className="absolute inset-0" style={{
                   backgroundImage: `
                     repeating-linear-gradient(60deg, transparent, transparent 35px, rgba(220, 38, 38, 0.1) 35px, rgba(220, 38, 38, 0.1) 70px),
@@ -228,34 +233,28 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 via-transparent to-red-400/20 blur-2xl"></div>
           </div>
           
-          {/* Dynamic Description with Enhanced Background */}
+          {/* Dynamic Subtitle with Enhanced Background */}
           <div className="mb-12 relative">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-400 mb-6 transition-all duration-1000 relative z-10">
               Championship Gala Dinner
             </h3>
-            <div className="relative bg-black/40 backdrop-blur-sm border border-yellow-400/30 rounded-2xl p-8 mb-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 via-transparent to-red-400/5 rounded-2xl"></div>
-              <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed font-light transition-all duration-1000 relative z-10">
-                {slides[currentSlide].description}
-              </p>
-            </div>
           </div>
           
           {/* Main CTA Buttons with Enhanced Gradients */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-8 py-4 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-xl w-44">
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent rounded-xl"></div>
-              <span className="relative z-10 whitespace-nowrap">Purchase Tickets</span>
-            </button>
-            <button className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-8 py-4 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-xl w-44">
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent rounded-xl"></div>
-              <span className="relative z-10 whitespace-nowrap">Reserve Your Table</span>
-            </button>
-            <button className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-8 py-4 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-xl w-44">
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent rounded-xl"></div>
-              <span className="relative z-10 whitespace-nowrap">View Details</span>
-            </button>
-          </div>
+                            <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="/packages" className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-8 py-4 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-xl w-44 inline-block text-center">
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent rounded-xl"></div>
+                      <span className="relative z-10 whitespace-nowrap">Purchase Tickets</span>
+                    </a>
+                    <a href="/packages" className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-8 py-4 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-xl w-44 inline-block text-center">
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent rounded-xl"></div>
+                      <span className="relative z-10 whitespace-nowrap">Reserve Your Table</span>
+                    </a>
+                    <a href="/packages" className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white px-8 py-4 rounded-xl font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-xl w-44 inline-block text-center">
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent rounded-xl"></div>
+                      <span className="relative z-10 whitespace-nowrap">View Details</span>
+                    </a>
+                  </div>
           
           {/* Secondary Buttons with Gradient Borders */}
           <div className="flex flex-wrap justify-center gap-6 mb-12">
@@ -271,169 +270,78 @@ export default function Home() {
             </button>
           </div>
           
-          {/* Stats Cards with Pattern Elements */}
-          <div className="flex flex-wrap justify-center gap-8">
-            <div className="relative bg-black/70 backdrop-blur-sm border border-yellow-400 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
+          {/* Stats Cards with Yellow Borders and Arrows */}
+          <div className="flex flex-wrap justify-center gap-3">
+            <div className="relative bg-black/70 backdrop-blur-sm border-2 border-yellow-400 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-red-400/10 rounded-xl"></div>
               <div className="absolute inset-0 opacity-20 pattern-hexagon animate-pattern-shift"></div>
               <div className="absolute top-2 right-2 w-2 h-2 bg-yellow-400/50 rounded-full animate-pulse"></div>
               <div className="text-3xl font-black text-yellow-400 mb-2 relative z-10">26th</div>
               <div className="text-sm text-white font-medium uppercase tracking-wide relative z-10">Championship</div>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-yellow-400"></div>
+              </div>
             </div>
-            <div className="relative bg-black/70 backdrop-blur-sm border border-yellow-400 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
+            <div className="relative bg-black/70 backdrop-blur-sm border-2 border-yellow-400 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-red-400/10 rounded-xl"></div>
               <div className="absolute inset-0 opacity-20 pattern-grid animate-pattern-shift" style={{animationDirection: 'reverse'}}></div>
               <div className="absolute top-2 left-2 w-2 h-2 bg-red-400/50 rounded-full animate-pulse-slow"></div>
               <div className="text-3xl font-black text-yellow-400 mb-2 relative z-10">1905</div>
               <div className="text-sm text-white font-medium uppercase tracking-wide relative z-10">Foundation</div>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-yellow-400"></div>
+              </div>
             </div>
-            <div className="relative bg-black/70 backdrop-blur-sm border border-yellow-400 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
+            <div className="relative bg-black/70 backdrop-blur-sm border-2 border-yellow-400 p-6 rounded-xl text-center transform hover:scale-105 transition-all duration-300 shadow-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-red-400/10 rounded-xl"></div>
               <div className="absolute inset-0 opacity-20 pattern-waves animate-pulse"></div>
               <div className="absolute bottom-2 right-2 w-2 h-2 bg-yellow-400/50 rounded-full animate-ping"></div>
               <div className="text-3xl font-black text-yellow-400 mb-2 relative z-10">90</div>
               <div className="text-sm text-white font-medium uppercase tracking-wide relative z-10">Years</div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Custom Slider Navigation with Gradient */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-          <div className="flex space-x-4 p-4 bg-black/30 backdrop-blur-sm rounded-full border border-yellow-400/30">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 relative ${
-                  index === currentSlide 
-                    ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 scale-125 shadow-lg' 
-                    : 'bg-white/50 hover:bg-white/75'
-                }`}
-              >
-                {index === currentSlide && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full animate-pulse"></div>
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-        
-        {/* Enhanced Slide Progress Bar */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 w-40 h-2 bg-black/50 backdrop-blur-sm rounded-full overflow-hidden border border-yellow-400/30">
-          <div 
-            className="h-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-red-500 transition-all duration-500 ease-linear relative"
-            style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
-          </div>
-        </div>
-        
-        {/* Scroll Indicator with Gradient */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-yellow-400 rounded-full flex justify-center relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/20 to-transparent rounded-full"></div>
-            <div className="w-1 h-3 bg-gradient-to-b from-yellow-400 to-yellow-500 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Galatasaray Kulübünden Derbi Açıklaması */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-yellow-400 mb-6">
-              Galatasaray Kulübünden
-            </h2>
-            <h3 className="text-4xl font-bold text-red-400 mb-4">
-              Derbi Açıklaması
-            </h3>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Resmi Galatasaray Kulübü açıklaması ile derbi heyecanı
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image Section */}
-            <div className="relative">
-              <div className="border-4 border-yellow-400 rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/2.jpg"
-                  alt="Galatasaray Kulübünden Derbi Açıklaması"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-full shadow-lg">
-                <span className="font-bold text-lg">RESMİ AÇIKLAMA</span>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-yellow-400"></div>
               </div>
             </div>
-            
-            {/* Content Section */}
-            <div className="space-y-8">
-              <div className="bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm border-2 border-yellow-400 p-8 rounded-2xl">
-                <h4 className="text-2xl font-bold text-yellow-400 mb-4">
-                  🏆 Galatasaray Kulübü Resmi Açıklaması
-                </h4>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Değerli Galatasaraylılar, kulübümüzün resmi derbi açıklaması ile sizlerle buluşuyoruz. 
-                  Bu özel gün için hazırladığımız program ve etkinlikler hakkında detaylı bilgi alabilirsiniz.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <span className="text-yellow-400 text-2xl">⚽</span>
-                    <span className="text-white font-medium">Resmi Kulüp Açıklaması</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <span className="text-yellow-400 text-2xl">📅</span>
-                    <span className="text-white font-medium">Etkinlik Programı</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <span className="text-yellow-400 text-2xl">🎫</span>
-                    <span className="text-white font-medium">Bilet Bilgileri</span>
+          </div>
+        </div>
+        
+       
+        
+                        {/* Evening Timeline Ticker */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-4xl px-4">
+                  <div className="bg-black/70 backdrop-blur-sm border border-yellow-400/30 rounded-xl p-4 overflow-hidden">
+                    <div className="flex items-center justify-center space-x-8 animate-pulse">
+                      {[
+                        { time: "7:00 PM", event: "Cocktail Reception" },
+                        { time: "8:00 PM", event: "Dinner Service Begins" },
+                        { time: "9:00 PM", event: "Championship Celebration" },
+                        { time: "9:30 PM", event: "Entertainment & Awards" },
+                        { time: "10:30 PM", event: "After-Party & Networking" }
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-center space-x-3 text-center min-w-max">
+                          <div className="text-lg font-black text-yellow-400">{item.time}</div>
+                          <div className="text-sm text-white font-medium">{item.event}</div>
+                          {index < 4 && (
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg transform hover:scale-105">
-                  Resmi Açıklamayı Oku
-                </button>
-                <button className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">
-                  Detayları İncele
-                </button>
-              </div>
-            </div>
-          </div>
-          
-          {/* Additional Derby Info */}
-          <div className="mt-16 grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-red-900/20 to-red-800/10 backdrop-blur-sm border-2 border-red-600 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-white text-2xl">🏟️</span>
-              </div>
-              <h4 className="text-xl font-bold text-white mb-3">Derbi Yeri</h4>
-              <p className="text-gray-300">Resmi derbi mekanı ve adres bilgileri</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-yellow-900/20 to-yellow-800/10 backdrop-blur-sm border-2 border-yellow-400 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-black text-2xl">⏰</span>
-              </div>
-              <h4 className="text-xl font-bold text-white mb-3">Derbi Saati</h4>
-              <p className="text-gray-300">Resmi derbi başlama saati ve program</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-gray-900/20 to-gray-800/10 backdrop-blur-sm border-2 border-gray-600 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-gray-600 to-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-white text-2xl">📢</span>
-              </div>
-              <h4 className="text-xl font-bold text-white mb-3">Duyurular</h4>
-              <p className="text-gray-300">Güncel derbi duyuruları ve haberler</p>
-            </div>
-          </div>
-        </div>
+
+                
+ 
+
+                {/* Scroll Indicator with Gradient */}
+                <div className="absolute bottom-40 left-1/2 transform -translate-x-1/2 animate-bounce">
+                  <div className="w-6 h-10 border-2 border-yellow-400 rounded-full flex justify-center relative">
+                    <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/20 to-transparent rounded-full"></div>
+                    <div className="w-1 h-3 bg-gradient-to-b from-yellow-400 to-yellow-500 rounded-full mt-2 animate-pulse"></div>
+                  </div>
+                </div>
       </section>
+ 
 
       {/* Quote Section */}
       <section className="py-20 bg-black">
@@ -534,9 +442,9 @@ export default function Home() {
                   VIP Access
                 </li>
               </ul>
-              <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black py-4 rounded-xl font-bold text-lg transition-all duration-300">
+              <a href="/packages" className="block w-full bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black py-4 rounded-xl font-bold text-lg transition-all duration-300 text-center">
                 Select Now
-              </button>
+              </a>
             </div>
 
             {/* Ultimate Champion */}
@@ -570,9 +478,9 @@ export default function Home() {
                   Premium Seating
                 </li>
               </ul>
-              <button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300">
+              <a href="/packages" className="block w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 text-center">
                 Buy Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -592,55 +500,89 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-12">
             <div className="border-2 border-yellow-400 p-10 rounded-2xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-full h-64 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl mb-8 flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/3.jpg"
-                  alt="Comedy Night"
-                  width={400}
-                  height={250}
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-full h-64 rounded-xl mb-8 flex items-center justify-center overflow-hidden relative">
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="w-40 h-40 bg-black rounded-full overflow-hidden border-4 border-yellow-400 shadow-2xl mb-4 relative">
+                    <Image
+                      src="/comody-2.jpg"
+                      alt="Comedy Night"
+                      width={160}
+                      height={160}
+                      className="w-full h-full object-contain"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-transparent to-red-400/20 rounded-full"></div>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-yellow-400 font-bold text-xl mb-1">Presented by Turkey is most beloved comedian</h4>
+                    <h5 className="text-yellow-400 font-bold text-2xl mb-1">Ceyhun Yılmaz</h5>
+                    <p className="text-red-400 text-sm font-medium">Stand-up Comedy Legend</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-3xl font-bold text-white text-center mb-6">Comedy Night</h3>
-              <ul className="text-gray-300 text-center space-y-3">
+              <h3 className="text-3xl font-bold text-yellow-400 text-center mb-6">Comedy Night</h3>
+              
+              <div className="border border-yellow-400 rounded-xl p-4 mb-6">
+                <p className="text-white text-center leading-relaxed">
+                  Get ready for an evening of non-stop laughter as Turkey is most celebrated comedian brings his championship-themed comedy special to life
+                </p>
+              </div>
+              
+              <ul className="text-white text-center space-y-3">
                 <li className="flex items-center justify-center">
-                  <span className="text-yellow-400 mr-3">•</span>
-                  Stand-up Comedy
+                  <span className="text-red-400 mr-3 text-lg">•</span>
+                  Exclusive championship material
                 </li>
                 <li className="flex items-center justify-center">
-                  <span className="text-yellow-400 mr-3">•</span>
-                  Interactive Shows
+                  <span className="text-red-400 mr-3 text-lg">•</span>
+                  Interactive audience segments
                 </li>
                 <li className="flex items-center justify-center">
-                  <span className="text-yellow-400 mr-3">•</span>
-                  Celebrity Guests
+                  <span className="text-red-400 mr-3 text-lg">•</span>
+                  Special guest appearances
                 </li>
               </ul>
             </div>
 
             <div className="border-2 border-yellow-400 p-10 rounded-2xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-full h-64 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl mb-8 flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/4.jpg"
-                  alt="Live Orchestra"
-                  width={400}
-                  height={250}
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-full h-64 rounded-xl mb-8 flex items-center justify-center overflow-hidden relative">
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="w-40 h-40 bg-black rounded-full overflow-hidden border-4 border-yellow-400 shadow-2xl mb-4 relative">
+                    <Image
+                      src="/ochestra.jpg"
+                      alt="Live Orchestra"
+                      width={160}
+                      height={160}
+                      className="w-full h-full object-contain"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-transparent to-yellow-400/20 rounded-full"></div>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-yellow-400 font-bold text-xl mb-1">Musical excellence meets championship celebration</h4>
+                    <h5 className="text-white font-bold text-yellow-400  text-2xl mb-1">Kenan Doğulu</h5>
+                    <p className="text-red-400 text-sm font-medium">with Full Symphony Orchestra</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-3xl font-bold text-white text-center mb-6">Live Orchestra</h3>
-              <ul className="text-gray-300 text-center space-y-3">
+              <h3 className="text-3xl font-bold text-yellow-400 text-center mb-6">Live Orchestra</h3>
+              
+              <div className="border border-yellow-400 rounded-xl p-4 mb-6">
+                <p className="text-white text-center leading-relaxed">
+                  Experience the magic of live music as one of Turkey is most acclaimed artists performs with a full orchestra in this exclusive concert
+                </p>
+              </div>
+              
+              <ul className="text-white text-center space-y-3">
                 <li className="flex items-center justify-center">
-                  <span className="text-yellow-400 mr-3">•</span>
-                  Classical Music
+                  <span className="text-red-400 mr-3 text-lg">•</span>
+                  Greatest hits medley
                 </li>
                 <li className="flex items-center justify-center">
-                  <span className="text-yellow-400 mr-3">•</span>
-                  Modern Renditions
+                  <span className="text-red-400 mr-3 text-lg">•</span>
+                  Championship victory anthem
                 </li>
                 <li className="flex items-center justify-center">
-                  <span className="text-yellow-400 mr-3">•</span>
-                  Special Performances
+                  <span className="text-red-400 mr-3 text-lg">•</span>
+                  Galatasaray tribute performance
                 </li>
               </ul>
             </div>
@@ -648,31 +590,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Evening Timeline */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-yellow-400 mb-6">
-              Evening Timeline
-            </h2>
-          </div>
-          
-          <div className="space-y-8">
-            {[
-              { time: "7:00 PM", event: "Cocktail Reception" },
-              { time: "8:00 PM", event: "Dinner Service Begins" },
-              { time: "9:00 PM", event: "Championship Celebration" },
-              { time: "9:30 PM", event: "Entertainment & Awards" },
-              { time: "10:30 PM", event: "After-Party & Networking" }
-            ].map((item, index) => (
-              <div key={index} className="flex items-center space-x-8 bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 hover:border-yellow-400 transition-all duration-300">
-                <div className="text-2xl font-black text-yellow-400 min-w-[120px]">{item.time}</div>
-                <div className="text-xl text-white font-medium">{item.event}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Championship Jerseys */}
       <section className="py-20 bg-black">
@@ -688,20 +606,19 @@ export default function Home() {
           
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { name: "Mauro Icardi", number: "9", image: "/1.jpg" },
-              { name: "Wilfried Zaha", number: "14", image: "/2.jpg" },
-              { name: "Dries Mertens", number: "10", image: "/3.jpg" },
-              { name: "Kerem Aktürkoğlu", number: "7", image: "/4.jpg" }
+              { name: "Mauro Icardi", number: "9", image: "/jersey/02.08.2025_11.59.59_REC.png" },
+              { name: "Wilfried Zaha", number: "14", image: "/jersey/02.08.2025_12.00.43_REC.png" },
+              { name: "Dries Mertens", number: "10", image: "/jersey/02.08.2025_12.01.08_REC.png" },
+              { name: "Kerem Aktürkoğlu", number: "7", image: "/jersey/02.08.2025_12.01.27_REC.png" }
             ].map((player, index) => (
               <div key={index} className="border-2 border-yellow-400 p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
-                <div className="w-full h-56 bg-gradient-to-br from-red-600 to-red-700 rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                <div className="w-full h-56 rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
                   <Image
                     src={player.image}
                     alt={`${player.name} Jersey`}
                     fill
-                    className="object-cover opacity-20"
+                    className="object-cover"
                   />
-                  <span className="text-white font-black text-4xl relative z-10">{player.number}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{player.name}</h3>
                 <p className="text-yellow-400 mb-3 font-semibold">Signed Jersey</p>
