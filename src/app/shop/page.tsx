@@ -336,7 +336,7 @@ export default function ShopPage() {
                         alt={`${jersey.name} Jersey`}
                         width={400}
                         height={400}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                         onError={(e) => {
                           // Fallback to placeholder if image fails to load
                           e.currentTarget.style.display = 'none';

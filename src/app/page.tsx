@@ -374,15 +374,7 @@ export default function Home() {
             <div className="absolute bottom-1/3 right-1/3 w-40 h-40 border-2 border-yellow-400/10 transform rotate-45 animate-geometric-float"></div>
           </div>
           {/* Derby Announcement Badge with Pattern Background */}
-          <div className="inline-flex items-center bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white px-8 py-4 rounded-full mb-8 animate-pulse shadow-lg relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-red-400/20 rounded-full"></div>
-            <div className="absolute inset-0 opacity-30 pattern-stripes animate-pattern-shift"></div>
-            <div className="absolute -top-2 -left-2 w-4 h-4 bg-yellow-400/30 rounded-full animate-ping"></div>
-            <div className="absolute -top-2 -right-2 w-3 h-3 bg-red-400/30 rounded-full animate-pulse-slow"></div>
-            <span className="text-yellow-400 mr-3 text-xl relative z-10">⚽</span>
-            <span className="font-display font-bold text-lg relative z-10">DERBY ANNOUNCEMENT</span>
-            <span className="text-yellow-400 ml-3 text-xl relative z-10">⚽</span>
-          </div>
+          
           
           {/* Dynamic Title with Enhanced Styling */}
           <div className="mb-6 relative">
@@ -441,11 +433,11 @@ export default function Home() {
                     {/* Desktop Timeline */}
                     <div className="hidden md:flex items-center justify-center space-x-8 animate-pulse">
                       {[
-                        { time: "7:00 PM", event: "Cocktail Reception" },
-                        { time: "8:00 PM", event: "Dinner Service Begins" },
-                        { time: "9:00 PM", event: "Championship Celebration" },
-                        { time: "9:30 PM", event: "Entertainment & Awards" },
-                        { time: "10:30 PM", event: "After-Party & Networking" }
+                        { time: "12 Novermber | 8:00 PM", event: "Marius Hotel" },
+                        { time: "14 Novermber | 8:00 PM", event: "Marius Hotel" },
+                        { time: "18 Novermber | 9:00 PM", event: "Marius Hotel" },
+                        { time: "25 Novermber | 9:30 PM", event: "Marius Hotel" },
+                        { time: "28 Novermber | 10:30 PM", event: "Marius Hotel" }
                       ].map((item, index) => (
                         <div key={index} className="flex items-center space-x-3 text-center">
                           <div className="text-lg font-black text-yellow-400">{item.time}</div>
@@ -810,7 +802,7 @@ export default function Home() {
                       alt={`${jersey.name} Jersey`}
                       width={400}
                       height={400}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                         const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
