@@ -1,5 +1,25 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Inter, Cinzel } from "next/font/google";
 import "./globals.css";
+
+// Font configurations
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Galatasaray USA Championship Gala Dinner",
@@ -20,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`antialiased ${playfair.variable} ${inter.variable} ${cinzel.variable}`}>
         {children}
       </body>
     </html>

@@ -3,19 +3,123 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+  --logo-gold: #d4af37;
+  --logo-red: #dc2626;
+  --logo-yellow: #fbbf24;
+  --elegant-gold: #b8860b;
+  --elegant-red: #b91c1c;
+  --elegant-yellow: #f59e0b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-logo-gold: var(--logo-gold);
+  --color-logo-red: var(--logo-red);
+  --color-logo-yellow: var(--logo-yellow);
+  --color-elegant-gold: var(--elegant-gold);
+  --color-elegant-red: var(--elegant-red);
+  --color-elegant-yellow: var(--elegant-yellow);
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-cinzel), serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Elegant Typography Classes */
+.font-elegant {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.font-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Logo Styling */
+.logo-text {
+  background: linear-gradient(135deg, var(--logo-gold) 0%, var(--logo-yellow) 50%, var(--logo-gold) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: logo-shine 3s ease-in-out infinite;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.logo-text-alt {
+  background: linear-gradient(135deg, var(--elegant-gold) 0%, var(--logo-yellow) 50%, var(--elegant-gold) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: logo-shine 4s ease-in-out infinite;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+@keyframes logo-shine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enhanced Button Styling */
+.btn-elegant {
+  background: linear-gradient(135deg, var(--elegant-gold) 0%, var(--logo-yellow) 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-elegant::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--logo-gold), var(--logo-yellow), var(--logo-gold));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-elegant:hover::before {
+  opacity: 1;
 }
 
 /* Custom scrollbar */
@@ -28,12 +132,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #dc2626;
+  background: linear-gradient(135deg, var(--logo-red), var(--elegant-red));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b91c1c;
+  background: linear-gradient(135deg, var(--elegant-red), var(--logo-red));
 }
 
 /* Smooth scrolling */
@@ -131,7 +235,7 @@ html {
 .pattern-hexagon {
   background-image: 
     repeating-linear-gradient(60deg, transparent, transparent 35px, rgba(220, 38, 38, 0.1) 35px, rgba(220, 38, 38, 0.1) 70px),
-    repeating-linear-gradient(-60deg, transparent, transparent 35px, rgba(234, 179, 8, 0.1) 35px, rgba(234, 179, 8, 0.1) 70px);
+    repeating-linear-gradient(-60deg, transparent, transparent 35px, rgba(212, 175, 55, 0.1) 35px, rgba(212, 175, 55, 0.1) 70px);
   background-size: 70px 70px;
 }
 
@@ -139,22 +243,22 @@ html {
   background-image: 
     linear-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(220, 38, 38, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(234, 179, 8, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(234, 179, 8, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px);
   background-size: 50px 50px, 50px 50px, 100px 100px, 100px 100px;
 }
 
 .pattern-stripes {
   background-image: 
     repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(220, 38, 38, 0.05) 10px, rgba(220, 38, 38, 0.05) 20px),
-    repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(234, 179, 8, 0.05) 10px, rgba(234, 179, 8, 0.05) 20px);
+    repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.05) 10px, rgba(212, 175, 55, 0.05) 20px);
   background-size: 40px 40px;
 }
 
 .pattern-waves {
   background-image: 
     radial-gradient(ellipse at center, rgba(220, 38, 38, 0.1) 0%, transparent 70%),
-    radial-gradient(ellipse at center, rgba(234, 179, 8, 0.1) 0%, transparent 70%);
+    radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
   background-size: 300px 300px, 400px 400px;
   background-position: 0% 0%, 100% 100%;
 }

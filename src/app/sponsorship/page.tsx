@@ -61,16 +61,35 @@ export default function SponsorshipPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white relative">
+      {/* Background with gradient overlay - Half page */}
+      <div className="absolute inset-0 z-0">
+        <div className="h-1/2 relative">
+          <Image
+            src="/header-img.webp"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+        </div>
+        <div className="h-1/2 bg-black"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10">
       {/* Header */}
       <header className="bg-black/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 rounded-full overflow-hidden">
                 <Image
                   src="/logo.jpg"
                   alt="Galatasaray Logo"
+                  width={48}
+                  height={48}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -103,7 +122,7 @@ export default function SponsorshipPage() {
       </header>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Page Title */}
         <div className="text-center mb-16">
           <h1 className="text-6xl font-black text-yellow-400 mb-6">Sponsorship Application</h1>
@@ -530,6 +549,7 @@ export default function SponsorshipPage() {
           </a>
         </div>
       </div>
+    </div>
     </div>
   );
 } 

@@ -58,7 +58,7 @@ export default function CustomizePage() {
     },
     {
       id: "icardi",
-      playerName: "Mauro Icardi",
+      playerName: "Victor Osimhen",
       playerInfo: "#10 Argentina",
       officialPrice: 115,
       signedPrice: 420,
