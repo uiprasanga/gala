@@ -433,15 +433,10 @@ export default function Home() {
                     {/* Desktop Timeline */}
                     <div className="hidden md:flex items-center justify-center space-x-8 animate-pulse">
                       {[
-                        { time: "12 Novermber | 8:00 PM", event: "Marius Hotel" },
-                        { time: "14 Novermber | 8:00 PM", event: "Marius Hotel" },
-                        { time: "18 Novermber | 9:00 PM", event: "Marius Hotel" },
-                        { time: "25 Novermber | 9:30 PM", event: "Marius Hotel" },
-                        { time: "28 Novermber | 10:30 PM", event: "Marius Hotel" }
+                        { time: "15 Nov 2025 | Doors Open 7:00 PM | Program begins: 8pm |  Location: Marriott Marquis Manhattan New York" }
                       ].map((item, index) => (
                         <div key={index} className="flex items-center space-x-3 text-center">
                           <div className="text-lg font-black text-yellow-400">{item.time}</div>
-                          <div className="text-sm text-white font-medium">{item.event}</div>
                           {index < 4 && (
                             <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
                           )}
